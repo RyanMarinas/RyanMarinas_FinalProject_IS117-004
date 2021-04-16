@@ -1,0 +1,171 @@
+/*DEVELOPER: Ryan Marinas, IS117-004, Spring, 2021 */
+*{
+    margin:0;
+    padding:0;
+}
+h2{
+    text-align: center;
+    font-size: 160%;
+}
+
+/* the styles for the section */
+section {
+    width: 100%;                  /* 525 / 800 X 100 */
+    float: left;
+    padding: 0 2.5% 20px 1%;       /* 20 / 800 x 100 */
+}
+section h3 {
+    font-size: 120%;
+    width:100%
+    padding: .5em 0 .25em 0;
+    color: darkgreen;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    position: center;
+    text-align: center;
+}
+section h2 {
+    color: darkgreen;
+    font-size: 180%;
+    padding: .5em 0 .25em 0;
+    font-style: italic;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    position: center;
+    text-align: center;
+}
+section h1 {
+    font-size: 120%;
+    padding: .5em 0 .25em 0;
+    color: #696969;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    position: center;
+    text-align: center;
+}
+section li {
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    width:100%
+    max-width:960px;
+    font-family:'Times New Roman', sans-serif;
+    background-color:#878787;
+    background-image:url("../images/marble.jpg");
+}
+main section{
+    position:sticky;
+    max-width:800px;
+    top:100px;
+    right: 500px;
+    border: 3px solid darkgreen;
+    margin-left:200px;
+    margin-bottom:100px;
+    padding:10px;
+    background-color:rgba(255, 255, 255, .89);
+    background-image:url("../images/paper.jpg");
+    box-shadow:-3px 4px 15px 3px #3c3c3c;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+    section h1 { font-size: 135%; }
+    section h2, aside h2 { font-size: 120%; }
+}
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+    header img { float: none; }
+    header { text-align: center; }
+    section {
+        float: none;
+        width: 95%;                     /* 100 - (2 x 2.5) for padding */
+    }
+    aside {
+        float: none;
+        padding-right: 2.5%;           /* 20 / 800 x 100 */
+        width: 95%;                    /* 100 - (2 x 2.5) for padding */
+    }
+    article img { max-width: 30%; }
+    #speakers {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: #800000 !important;
+    }
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+    body { font-size: 90%; }
+}
+/* the styles for the navigation menu */
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#nav_menu ul li {
+    float: left;
+    width: 20%;                 /* 160 / 800 x 100 */
+}
+#nav_menu ul li a {
+    display: block;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+}
+#nav_menu a.current {
+    color: yellow;
+}
+#nav_menu ul ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+a:focus, a:hover {
+    font-style: italic;
+}
